@@ -1,0 +1,561 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.vertical_middle {
+  vertical-align: middle;
+}
+
+.vertical_top {
+  vertical-align: top;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: #4b4b4b;
+}
+
+.wrop {
+  flex-wrap: wrap;
+}
+
+.back_white {
+  background: #fff;
+}
+
+.white {
+  color: #fff
+}
+
+html {
+  font-size: 10px;
+}
+
+.margin_auto {
+  margin: auto;
+}
+
+.padding_right_1 {
+  padding-right: 10px;
+}
+
+.padding_left_1 {
+  padding-left: 1rem;
+}
+
+.padding_left_20 {
+  padding-left: 20px;
+}
+
+.padding_top_20 {
+  padding-top: 2rem;
+}
+
+.padding_top_30 {
+  padding-top: 3rem;
+}
+
+.padding_top_70 {
+  padding-top: 7rem;
+}
+
+.padding_1 {
+  padding: 1rem;
+}
+
+.padding_bottom_harf {
+  padding-bottom: .5rem;
+}
+
+.padding_bottom_20 {
+  padding-bottom: 2rem;
+}
+
+.padding_bottom_30 {
+  padding-bottom: 3rem;
+}
+
+.wsnp {
+  white-space: nowrap;
+}
+
+.align_baseline {
+  align-items: baseline
+}
+
+.iconfont {
+  font-size: none;
+}
+
+.margin_top_10 {
+  margin-top: 10px;
+}
+
+.margin_top_20 {
+  margin-top: 2rem;
+}
+
+.margin_top_3 {
+  margin-top: 3rem;
+}
+
+.margin_top_4 {
+  margin-top: 4rem;
+}
+
+.margin-bottom-2 {
+  margin-top: 2rem;
+}
+
+.width_100 {
+  width: 100%;
+}
+
+.width_90 {
+  width: 90%;
+}
+
+.width_80 {
+  width: 80%;
+}
+
+.width_60 {
+  width: 60%;
+}
+
+.width_49 {
+  width: 49%;
+}
+
+.width_48 {
+  width: 48%;
+}
+
+.width_47 {
+  width: 47%;
+}
+
+.width_50 {
+  width: 50%;
+}
+
+.width_45 {
+  width: 45%;
+}
+
+.width_40 {
+  width: 40%;
+}
+.width_32 {
+  width: 32%;
+}
+.width_31 {
+  width: 31%;
+}
+.width_30 {
+  width: 30%;
+}
+
+.width_25 {
+  width: 25%;
+}
+
+.z_index100 {
+  z-index: 100;
+}
+
+.width_15 {
+  width: 15%;
+}
+
+.height_100 {
+  height: 100%;
+}
+
+.font_size_4 {
+  font-size: 0.8rem;
+}
+
+.display_none {
+  display: none;
+}
+
+.display_inline_block {
+  display: inline-block;
+}
+
+.display_flex {
+  display: flex;
+}
+
+.display_block {
+  display: block;
+}
+
+.flex_row {
+  flex-direction: row;
+}
+
+.flex_align_stretch {
+  align-items: stretch
+}
+
+.flex_column {
+  flex-direction: column;
+}
+
+.flex_1 {
+  flex: 1;
+}
+
+.flex_2 {
+  flex: 2
+}
+
+.flex_item_full {
+  align-items: stretch;
+}
+
+.flex_align_end {
+  align-items: flex-end
+}
+
+.flex_align_center {
+  align-items: center;
+}
+
+.font_size_1 {
+  font-size: 1rem
+}
+
+.font_size_2 {
+  font-size: 1.2rem
+}
+
+.font_size_3 {
+  font-size: 1.3rem
+}
+
+.font_size_4 {
+  font-size: 1.4rem
+}
+
+.font_size_5 {
+  font-size: 1.5rem
+}
+
+.font_size_6 {
+  font-size: 1.6rem
+}
+
+.font_size_7 {
+  font-size: 1.7rem
+}
+
+.font_size_8 {
+  font-size: 1.8rem
+}
+
+.font_size_9 {
+  font-size: 1.9rem
+}
+
+.font_size_20 {
+  font-size: 2rem
+}
+
+.font_size_21 {
+  font-size: 2.1rem
+}
+
+.font_size_30 {
+  font-size: 3rem
+}
+
+.font_size_36 {
+  font-size: 3.6rem;
+}
+
+.font_size_40 {
+  font-size: 4rem
+}
+
+.font_size_60 {
+  font-size: 6rem
+}
+
+.flex_jusify_space {
+  justify-content: space-between;
+}
+
+.text_right {
+  text-align: right;
+}
+
+.text_center {
+  text-align: center;
+}
+
+.box_szing {
+  box-sizing: border-box
+}
+
+.margin_left_1 {
+  margin-left: 0.1rem;
+}
+
+.margin_left_2 {
+  margin-left: 0.2rem;
+}
+
+.margin_left_3 {
+  margin-left: 0.3rem;
+}
+
+.margin_left_4 {
+  margin-left: 0.4rem;
+}
+
+.margin_left_5 {
+  margin-left: 0.5rem;
+}
+
+.margin_left_14 {
+  margin-left: 1.4rem;
+}
+
+.margin_left_15 {
+  margin-left: 1.5rem;
+}
+
+.margin_left_16 {
+  margin-left: 1.6rem;
+}
+
+.margin_left_17 {
+  margin-left: 1.7rem;
+}
+
+.margin_left_18 {
+  margin-left: 1.8rem;
+}
+
+.margin_left_20 {
+  margin-left: 2rem;
+}
+
+.margin_left_22 {
+  margin-left: 2.2rem;
+}
+
+.margin_left_28 {
+  margin-left: 2.8rem;
+}
+
+.margin_left_38 {
+  margin-left: 3.8rem;
+}
+
+.flex_end {
+  justify-content: flex-end;
+}
+
+.flex_center {
+  justify-content: center;
+}
+
+.margin_right_20 {
+  margin-right: 2rem;
+}
+
+.margin_top_1 {
+  margin-top: 1rem
+}
+
+.margin_bottom_1 {
+  margin-bottom: 1rem
+}
+
+.margin_bottom_15 {
+  margin-bottom: 1.5rem
+}
+
+.margin_bottom_2 {
+  margin-bottom: 2rem
+}
+
+.margin_bottom_3 {
+  margin-bottom: 3rem
+}
+
+.margin_bottom_4 {
+  margin-bottom: 4rem
+}
+
+.position_relative {
+  position: relative
+}
+
+.overflow_scroll {
+  overflow: scroll;
+}
+
+.overflow_hidden {
+  overflow: hidden
+}
+
+.hoverdiv {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+}
+
+.position_absolute {
+  position: absolute
+}
+
+.position_fixed {
+  position: fixed;
+}
+
+.pcs {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1002;
+  transition: .4s;
+  transform: translate(-50%, -50%);
+}
+
+.blur {
+  background: inherit;
+  -webkit-filter: blur(6px);
+  -moz-filter: blur(6px);
+  -ms-filter: blur(6px);
+  -o-filter: blur(6px);
+  filter: blur(6px);
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=15, MakeShadow=false);
+}
+
+.text_decoration_overlin {
+  text-decoration: line-through;
+}
+
+.text_decoration_underline {
+  text-decoration: underline;
+}
+
+.font_weight_200 {
+  font-weight: 200;
+}
+
+.font_weight_400 {
+  font-weight: 400;
+}
+
+.font_weight_600 {
+  font-weight: 600;
+}
+
+.font_weight_800 {
+  font-weight: 800;
+}
+
+.float_left {
+  float: left;
+}
+
+.float_right {
+  float: right;
+}
+
+.nscrol::-webkit-scrollbar {
+  display: none
+}
+
+/* 大于800的样式 */
+
+.media_wrop_800 {
+  flex-wrap: nowrap;
+}
+
+.media_display_800 {
+  display: inline-block;
+}
+
+.media_width_80_800 {
+  width: 80%;
+}
+
+.media_flex_row_800 {
+  flex-direction: row;
+}
+
+.media_width_20_800 {
+  width: 20%;
+}
+
+.media_width_40_800 {
+  width: 40%;
+}
+
+.media_height_300 {
+  height: 700px;
+}
+
+/* 小于800 的尺寸 */
+
+@media screen and (max-width:800px) {
+  .meidia_margin_top_3 {
+    margin-top: 3px;
+  }
+  .media_screen_none {
+    display: none;
+  }
+  .display_by_screen_800 {
+    display: block;
+  }
+  .media_wrop_800 {
+    flex-wrap: wrap;
+  }
+  .media_width_80_800 {
+    width: 100%;
+  }
+  .el-dialog {
+    width: 90%;
+  }
+  .media_flex_row_800 {
+    flex-direction: column;
+  }
+  .media_width_20_800 {
+    width: 100%;
+  }
+  .media_width_40_800 {
+    width: 100%;
+  }
+  .media_height_300 {
+    height: 300px;
+  }
+}
+
+.table_text_center th,
+.table_text_center td {
+  text-align: center;
+}
+
+.el-dialog {
+  margin-bottom: 20px;
+}
+
+.el-dialog label.el-form-item__label {
+  white-space: nowrap !important;
+}
