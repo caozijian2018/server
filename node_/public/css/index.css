@@ -125,9 +125,11 @@ img{
 	width:100%;
 }
 
-
+#mian ul li{
+	transition: .4s;
+}
 #mian ul li:hover{
-
-    transform: rotateX(12deg) rotateY(12deg);
+	box-shadow: 5px 5px 10px #000;
+    /* transform: rotateX(12deg) rotateY(12deg); */
 
 }
