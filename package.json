@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev" : "export NODE_ENV=development && node  app/index.js",
-    "prod" : "export NODE_ENV=production && node  app/index.js"
+    "dev": "export NODE_ENV=development && node  app/index.js",
+    "prod": "export NODE_ENV=production && node  app/index.js"
   },
   "author": "",
   "license": "ISC",
