@@ -116,12 +116,12 @@ nav .nav{
 	color: white;
 	font-size: 13px;
 	line-height: 32px;
-	padding-top: 26px;
+	padding-top: 5px;
 }
 #mian .ad{
     width: 968px;
 	height: 300px;
-	margin-top:14px;
+	/* margin-top:14px; */
 }
 .ad img{
 	width: 100%;
