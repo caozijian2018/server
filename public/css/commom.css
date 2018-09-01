@@ -671,9 +671,10 @@ padding: 0 10px;
 }
 #apply .handin{
 	width: 1200px;
-	height: 827px;
+	min-height: 427px;
 	margin: 0 auto;
-	background: url(../images/apply.jpg);position: absolute;
+	background: url(../images/apply.jpg);
+	position: absolute;
 	left: 50%;
 	top: 50%;
 	margin-left: -600px;
