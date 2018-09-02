@@ -4,6 +4,8 @@
 		<meta charset="UTF-8">
 		<title>走进尹馨</title>
 		<link rel="stylesheet" href="css/commom.css" />
+		<link rel="stylesheet" href="css/global_css.css" />
+
 		<style>
 			
 #nav1 li div{
@@ -28,7 +30,7 @@
 		</style>
 	</head>
 	<body>
-		<nav style=" height:80px;">
+		<nav style=" height:80px;z-index:10000">
 			<a href="index.html" target="_self" class="logo">
 				<img src="images/logo.png" alt="" style=" width: 80px; height: 80px;">
 			</a>
@@ -55,7 +57,11 @@
         				<div><a href="">培训动态</a></div></li>
 			</ul>
 		</nav>	
-		<div id="banner">
+		<div class="position_relative">
+				<img src="images/ab1.jpg" class="width_100" alt="">
+				<img src="images/ab.png" style="width:95%" class=" pcs margin_top_3"  alt="" srcset="">
+			</div>
+		<div id="banner" class="display_none">
 			<div class="banner_box">
 				<img src="images/about_1.png" width="100%" style="margin-top: 40px;">
 			</div>
