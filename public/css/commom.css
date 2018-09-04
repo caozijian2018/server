@@ -440,6 +440,25 @@ nav .nav{
 	float: left;
 	background: rgba(255,255,255,.8);
 }
+#news_content .news_px{
+	width: 1200px;
+	float: left;
+	background: rgba(255,255,255,.8);
+}
+.news_details .search_px{
+	width: 720px;
+	margin: 0 auto;
+	padding-top: 40px;
+	padding-bottom: 20px;
+	border-bottom: 2px dashed #c1c3c2;
+}
+.news_details .search_px img{
+	width: 323px;
+	height: 222px;
+	margin-left: -323px;
+	margin-top: 222px;
+	float: left; 
+}
 .news_type a h5{
 	font-size: 24px;
 	text-align: center;
@@ -475,6 +494,10 @@ nav .nav{
 }
 #news_list{
 	width: 720px;
+	margin: 0 auto;
+}
+#news_list_fx{
+	width: 1200px;
 	margin: 0 auto;
 }
 #news_list li a{
@@ -540,6 +563,15 @@ nav .nav{
 	font-size: 45px;
 	color: #3f989b;
 	text-align: center;
+}
+.recuite h4{
+	width: 100%;
+	background: rgba(199,219,220,.8);
+	line-height: 90px;
+	font-size: 28px;
+	color: #000000;
+	text-align: left;
+	text-indent: 25px;
 }
 .recuite .campus_recruite{
 	background: rgba(255,255,255,.94);
@@ -748,5 +780,6 @@ padding: 0 10px;
 	margin: 0 auto;
 	color: white;font-size: 30px;
 	margin-top: 84px;
+	margin-bottom: 60px;
 }
 
