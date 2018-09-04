@@ -104,7 +104,7 @@ nav .nav{
 #cataloge li a .brief{
 	width: 100%;
 	padding:10px;
-	height: 162px;
+	height: 115px;
 	background: rgba(0,0,0,.5);
 	position: absolute;
 	left: 0;
@@ -116,7 +116,7 @@ nav .nav{
 	color: white;
 	font-size: 13px;
 	line-height: 32px;
-	padding-top: 5px;
+	padding-top: 0px;
 }
 #mian .ad{
     width: 968px;
@@ -542,7 +542,7 @@ nav .nav{
 	width: 245px;
 	height: 36px;
 	background: #b6d9db;
-	text-align: center;
+	text-align: center;margin-left: 76px;
 	line-height: 36px;
 	color: black;
 	font-size: 18px;
@@ -556,7 +556,21 @@ nav .nav{
 	box-shadow: 0 0 66px rgba(0,0,0,.2);
 	padding-bottom: 85px;
 }
+.recuite2{
+	width: 1200px;
+	margin: 0 auto;
+	box-shadow: 0 0 66px rgba(0,0,0,.2);
+	padding-bottom: 3px;
+}
 .recuite h2{
+	width: 100%;
+	background: rgba(199,219,220,.8);
+	line-height: 90px;
+	font-size: 45px;
+	color: #3f989b;
+	text-align: center;
+}
+.recuite2 h2{
 	width: 100%;
 	background: rgba(199,219,220,.8);
 	line-height: 90px;
@@ -566,14 +580,27 @@ nav .nav{
 }
 .recuite h4{
 	width: 100%;
-	background: rgba(199,219,220,.8);
+	margin-left: -11px;
+	# background: rgba(199,219,220,.8);
 	line-height: 90px;
 	font-size: 28px;
 	color: #000000;
-	text-align: left;
+	text-align: center;
+	text-indent: 25px;
+}
+.recuite2 h4{
+	width: 100%;
+	background: rgba(153,204,204,.8);
+	line-height: 90px;
+	font-size: 26px;
+	color: #000000;
 	text-indent: 25px;
 }
 .recuite .campus_recruite{
+	background: rgba(255,255,255,.94);
+	padding-top: 38px;
+}
+.recuite2 .campus_recruite{
 	background: rgba(255,255,255,.94);
 	padding-top: 38px;
 }
@@ -782,4 +809,3 @@ padding: 0 10px;
 	margin-top: 84px;
 	margin-bottom: 60px;
 }
-
