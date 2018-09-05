@@ -1,133 +1,286 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>走进尹馨</title>
-		<link rel="stylesheet" href="css/commom.css" />
-		<link rel="stylesheet" href="css/global_css.css" />
 
-		<style>
-			
-#nav1 li div{
-	display:none;
-}
-
-#nav1 li:hover div{
-	display:block;	
-	background: rgba(255,255,255,.6);
-	/*background:url(images/qipao.png) no-repeat;*/
-	
-}
-#nav1 li:hover div a{
-	font-size:14px;
-	line-height: 60px;
-}
-
-		.wechat img{
-		 width: 100%;
-    margin-top: 40px;
+<head>
+	<meta charset="UTF-8">
+	<title>走进尹馨</title>
+	<link rel="stylesheet" href="css/commom.css" />
+	<link rel="stylesheet" href="css/global_css.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_616698_x0ht57f1kko.css">
+	<script src="js/vue.js"></script>
+	<style>
+		#nav1 li div {
+			display: none;
 		}
-		</style>
-	</head>
-	<body>
-		<nav style=" height:80px;z-index:10000">
-			<a href="index.html" target="_self" class="logo">
-				<img src="images/logo.png" alt="" style=" width: 80px; height: 80px;">
-			</a>
-			<ul class="nav clear" id="nav1" style="top: -22px; font-size: 18px;">
-				<li><a href="about.html" target="_self" style="font-size: 18px;">走进馨尹</a>
-						<div><a href="about.html" target="_self">企业简介</a></div>
-        				<div><a href="cultural.html" target="_self">企业文化</a></div>
-        				<div><a href="team.html" target="_self">高管团队</a></div>
-				</li>
-				<li><a href="" target="_self" style="font-size: 18px;">服务业态</div>
-						<div><a href="channel.html" target="_self">渠道</a></div>
-        				<div><a href="sales.html" target="_self">销售</a></div>
-        				<div><a href="consult.html" target="_self">顾问</a></div>
-        				<div><a href="caseofcooperation.html">合作项目</a></div>
-				</li>
-				<li><a href="" target="_self" style="font-size: 18px;">新闻中心</a>
-						<div><a href="news_industry.html" target="_self">馨尹动态</a></div>
-        				<div><a href="news_industry.html">行业动态</a></div>
-				</li>
-				<li><a href="" target="_self" style="font-size: 18px;">加入馨尹</a>
-				
-						<div><a href="campus.html" target="_self">校园招聘</a></div>
-        				<div><a href="social.html">社会招聘</a></div>
-        				<div><a href="training.html">培训动态</a></div></li>
+
+		#nav1 li:hover div {
+			display: block;
+			background: rgba(255, 255, 255, .6);
+			/*background:url(images/qipao.png) no-repeat;*/
+
+		}
+
+		#nav1 li:hover div a {
+			font-size: 14px;
+			line-height: 60px;
+		}
+
+		.wechat img {
+			width: 100%;
+			margin-top: 40px;
+		}
+	</style>
+</head>
+
+<body>
+
+
+	<div class="hoverdiv display_none position_fixed" style="z-index:100000">
+		<div class="text_center links  white padding_top_30">
+			<h2>
+				走进馨尹
+			</h2>
+			<ul>
+				<li><a href="about.html" target="_self">企业简介</a></li>
+				<li><a href="cultural.html" target="_self">企业文化</a></li>
+				<li><a href="team.html" target="_self">高管团队</a></li>
 			</ul>
-		</nav>	
-		<div class="position_relative">
-				<img src="images/ab1.jpg" class="width_100" alt="">
-				<img src="images/ab.png" style="width:95%" class=" pcs margin_top_3"  alt="" srcset="">
-			</div>
-		<div id="banner" class="display_none">
-			<div class="banner_box">
-				<img src="images/about_1.png" width="100%" style="margin-top: 40px;">
-			</div>
-			<div class="title">
-				<h1>关 于 我 们</h1>
-				<h2>ABOUT US</h2>
-			</div>
-			<div class="icon">
-				<img src="images/banner_2.png">
+			<h2>
+				服务业态
+			</h2>
+			<ul>
+				<li><a href="channel.html" target="_self">渠道</a></li>
+				<li><a href="sales.html" target="_self">销售</a></li>
+				<li><a href="consult.html" target="_self">顾问</a></li>
+				<li><a href="caseofcooperation.html">合作项目</a></li>
+			</ul>
+			<h2>
+				新闻中心
+			</h2>
+			<ul>
+				<li><a href="news_industry.html" target="_self">馨尹动态</a></li>
+				<li><a href="news_industry.html">行业动态</a></li>
+			</ul>
+			<h2>加入馨尹</h2>
+			<ul>
+				<li><a href="campus.html" target="_self">校园招聘</a></li>
+				<li><a href="social.html">社会招聘</a></li>
+				<li><a href="training.html">培训动态</a></li>
+			</ul>
+			<div class="text_center margin_top_20">
+				<i class="iconfont icon-cha  white " style="font-size:30px"></i>
 			</div>
 		</div>
-		<div id="content">
-			<p>成都馨尹房地产营销策划有限公司是一家集房地产营销策划、渠道、销售、顾问为一体的专业性地产服务公司。由胡智超先生创立于2015年11月，总部设在成都·环球中心。
+	</div>
+	<nav style=" height:80px;z-index:10000" class="">
+		<a href="index.html" target="_self" class="logo">
+			<img src="images/logo.png" alt="" style=" width: 80px; height: 80px;">
+		</a>
+		<div style="line-height:80px" class="showbox iconfont boxnoe icon-option float_right margin_right_20">
 
-馨尹核心团队由原龙湖一线营销管理团队组成，至今合作项目均是“独家”+“明星盘”。公司是一个拥有丰富营销、策划、管理经验的团队，定位为“专业力”+“深耕”，主要承接项目均来自国内知名开发商，与绿地、朗诗、阳光城、新希望、中铁建、建发、中南、中大等公司均有深度合作，并获得服务公司一致好评。建立至今，馨尹通过不断的学习与合作，依靠自身优秀的团队和强大的业务完成能力，在同行业中享誉较高的口碑及声誉。同时，公司销售业绩稳居同行业前三名，是一家具有丰富销售经验及重难点项目去化能力的地产营销策划公司。
+		</div>
+		<ul class="nav clear hiddenmove" id="nav1" style="top: -22px; font-size: 18px;">
+			<li><a href="about.html" target="_self" style="font-size: 18px;">走进馨尹</a>
+				<div><a href="about.html" target="_self">企业简介</a></div>
+				<div><a href="cultural.html" target="_self">企业文化</a></div>
+				<div><a href="team.html" target="_self">高管团队</a></div>
+			</li>
+			<li><a href="" target="_self" style="font-size: 18px;">服务业态</div>
+					<div><a href="channel.html" target="_self">渠道</a></div>
+					<div><a href="sales.html" target="_self">销售</a></div>
+					<div><a href="consult.html" target="_self">顾问</a></div>
+					<div><a href="caseofcooperation.html">合作项目</a></div>
+			</li>
+			<li><a href="" target="_self" style="font-size: 18px;">新闻中心</a>
+				<div><a href="news_industry.html" target="_self">馨尹动态</a></div>
+				<div><a href="news_industry.html">行业动态</a></div>
+			</li>
+			<li><a href="" target="_self" style="font-size: 18px;">加入馨尹</a>
 
-成立之初，馨尹就一直秉承“以渠带销·精于成交”的理念，专注于客户与合作伙伴的双向满意，以“成交高于一切”作为公司精神，秉持专业高效的工作态度，坚韧勤奋、正向阳光，坚持做一家有责任感、有担当、有战斗力的正能量公司。
+				<div><a href="campus.html" target="_self">校园招聘</a></div>
+				<div><a href="social.html">社会招聘</a></div>
+				<div><a href="training.html">培训动态</a></div>
+			</li>
+		</ul>
+	</nav>
+	<div class="position_relative">
+		<img src="images/ab1.jpg" class="width_100" alt="">
+		<img src="images/ab.png" style="width:95%" class=" pcs margin_top_3" alt="" srcset="">
+	</div>
+	<div id="banner" class="display_none">
+		<div class="banner_box">
+			<img src="images/about_1.png" width="100%" style="margin-top: 40px;">
+		</div>
+		<div class="title">
+			<h1>关 于 我 们</h1>
+			<h2>ABOUT US</h2>
+		</div>
+		<div class="icon">
+			<img src="images/banner_2.png">
+		</div>
+	</div>
+	<div id="content">
+		<p>成都馨尹房地产营销策划有限公司是一家集房地产营销策划、渠道、销售、顾问为一体的专业性地产服务公司。由胡智超先生创立于2015年11月，总部设在成都·环球中心。 馨尹核心团队由原龙湖一线营销管理团队组成，至今合作项目均是“独家”+“明星盘”。公司是一个拥有丰富营销、策划、管理经验的团队，定位为“专业力”+“深耕”，主要承接项目均来自国内知名开发商，与绿地、朗诗、阳光城、新希望、中铁建、建发、中南、中大等公司均有深度合作，并获得服务公司一致好评。建立至今，馨尹通过不断的学习与合作，依靠自身优秀的团队和强大的业务完成能力，在同行业中享誉较高的口碑及声誉。同时，公司销售业绩稳居同行业前三名，是一家具有丰富销售经验及重难点项目去化能力的地产营销策划公司。
+			成立之初，馨尹就一直秉承“以渠带销·精于成交”的理念，专注于客户与合作伙伴的双向满意，以“成交高于一切”作为公司精神，秉持专业高效的工作态度，坚韧勤奋、正向阳光，坚持做一家有责任感、有担当、有战斗力的正能量公司。 馨尹将“用能人、卖好房、高标准、留口碑”作为使命和要求，用严格的标准督促自己。独创“头尾原则”，头做渠道，尾做销售，打通整个销售链，公司在以渠道业务为主，销售业务为辅的优质服务精神上赢得众多客户、合作伙伴、业内同行的尊重、口碑和赞誉，在完成公司使命的道路上，展现自己的专业态度，实现人们的居家梦。
 
-馨尹将“用能人、卖好房、高标准、留口碑”作为使命和要求，用严格的标准督促自己。独创“头尾原则”，头做渠道，尾做销售，打通整个销售链，公司在以渠道业务为主，销售业务为辅的优质服务精神上赢得众多客户、合作伙伴、业内同行的尊重、口碑和赞誉，在完成公司使命的道路上，展现自己的专业态度，实现人们的居家梦。
 
-
-</p>
+		</p>
 		<div class="logo_box">
 			<img src="images/logo.png">
 		</div>
+	</div>
+	<div id="footer" style="margin-top: 110px;">
+		<div class="white display_none text_center footershow width_100">
+			<div class="">
+				<div>走进馨尹</div>
+				<div><a href="about.html" target="_self">企业简介</a></div>
+				<div><a href="cultural.html" target="_self">企业文化</a></div>
+				<div><a href="team.html" target="_self">高管团队</a></div>
+			</div>
+			<div>服务业态</div>
+			<div><a href="channel.html" target="_self">渠道</a></div>
+			<div><a href="sales.html" target="_self">销售</a></div>
+			<div><a href="consult.html" target="_self">顾问</a></div>
+			<div><a href="caseofcooperation.html">合作项目</a></div>
+			<div>
+				<div>新闻中心</div>
+				<div><a href="news_industry.html" target="_self">馨尹动态</a></div>
+				<div><a href="">行业动态</a></div>
+
+			</div>
+			<div>
+				<div>加入馨尹</div>
+				<div><a href="campus.html" target="_self">校园招聘</a></div>
+				<div><a href="social.html">社会招聘</a></div>
+				<div><a href="training.html">培训动态</a></div>
+			</div>
 		</div>
-		<div id="footer" style="margin-top: 110px;">
-        	<div class="content clear">
-        		<div class="list clear">
-        			<dl>
-        				<dt>走进馨尹</dt>
-        				<dd><a href="about.html" target="_self">企业简介</a></dd>
-        				<dd><a href="cultural.html" target="_self">企业文化</a></dd>
-        				<dd><a href="team.html" target="_self">高管团队</a></dd>
-        			</dl>
-        			<dl>
-        				<dt>服务业态</dt>
-        				<dd><a href="channel.html" target="_self">渠道</a></dd>
-        				<dd><a href="sales.html" target="_self">销售</a></dd>
-        				<dd><a href="consult.html" target="_self">顾问</a></dd>
-        				<dd><a href="caseofcooperation.html">合作项目</a></dd>
-        			</dl>
-        			<dl>
-        				<dt>新闻中心</dt>
-        				<dd><a href="news_industry.html" target="_self">馨尹动态</a></dd>
-        				<dd><a href="">行业动态</a></dd>
-        				
-        			</dl>
-        			<dl>
-        				<dt>加入馨尹</dt>
-        				<dd><a href="campus.html" target="_self">校园招聘</a></dd>
-        				<dd><a href="social.html">社会招聘</a></dd>
-        				<dd><a href="training.html">培训动态</a></dd>
-        			</dl>
-        		</div>
-        		<div class="contact">
-        			<h2>Add:四川省成都市高新区环球中心N1-1404</h2>
-        			<h2>Global center N1-1404 of Chengdu hi tech Zone, Sichuan</h2>
-        			<h2>Email:marketing@xinyin.com</h2>
-        			<h2>Tell:028-12345678</h2>
-        			<div class="wechat" >
-        			
-        			<img src="images/about_1.png">
-        			</div>
-        		</div>
-        	</div>
-        </div>
-	</body>
+		<div class="content clear footers">
+			<div class="list clear">
+				<dl>
+					<dt>走进馨尹</dt>
+					<dd><a href="about.html" target="_self">企业简介</a></dd>
+					<dd><a href="cultural.html" target="_self">企业文化</a></dd>
+					<dd><a href="team.html" target="_self">高管团队</a></dd>
+				</dl>
+				<dl>
+					<dt>服务业态</dt>
+					<dd><a href="channel.html" target="_self">渠道</a></dd>
+					<dd><a href="sales.html" target="_self">销售</a></dd>
+					<dd><a href="consult.html" target="_self">顾问</a></dd>
+					<dd><a href="caseofcooperation.html">合作项目</a></dd>
+				</dl>
+				<dl>
+					<dt>新闻中心</dt>
+					<dd><a href="news_industry.html" target="_self">馨尹动态</a></dd>
+					<dd><a href="">行业动态</a></dd>
+
+				</dl>
+				<dl>
+					<dt>加入馨尹</dt>
+					<dd><a href="campus.html" target="_self">校园招聘</a></dd>
+					<dd><a href="social.html">社会招聘</a></dd>
+					<dd><a href="training.html">培训动态</a></dd>
+				</dl>
+			</div>
+			<div class="contact">
+				<h2>Add:四川省成都市高新区环球中心N1-1404</h2>
+				<h2>Global center N1-1404 of Chengdu hi tech Zone, Sichuan</h2>
+				<h2>Email:marketing@xinyin.com</h2>
+				<h2>Tell:028-12345678</h2>
+				<div class="wechat">
+
+					<img src="images/about_1.png">
+				</div>
+			</div>
+		</div>
+	</div>
+	<style>
+		.boxnoe {
+			visibility: hidden;
+		}
+
+		.hoverdiv {
+			overflow: hidden;
+		}
+
+		.left_hidden_box {
+			height: 100%;
+			width: 50%;
+			position: absolute;
+			z-index: 1000px;
+			left: -50%;
+			background: #fff;
+		}
+
+		.links a {
+			color: #fff;
+		}
+
+		.links li {
+			margin-top: 10px;
+		}
+
+		.links h2 {
+			color: #fff;
+			margin-top: 10px
+		}
+
+		.left_hidden_box.show {
+			left: -50%;
+		}
+
+		@media screen and ( max-width: 800px) {
+			.left_hidden_box h2 {
+				margin-top: 20px;
+			}
+			.footershow{
+				display:block;
+			}
+			.footershow a{
+				color:white;
+				padding:3px;
+			}
+			.footers {
+				display: none;
+			}
+			.boxnoe {
+				visibility: visible;
+			}
+			.wechat {
+				display: none;
+			}
+			#nav1 {
+				display: none;
+			}
+		}
+
+		#content {
+			width: 100%;
+			margin: 0 auto;
+			margin-top: 40px;
+			position: relative;
+		}
+
+		#footer .content {
+			width: 100%;
+			margin: 0 auto;
+		}
+	</style>
+</body>
+<script>
+	$('.showbox').click(function () {
+		$('.hoverdiv').css("display", "block");
+		$('body').css('overflow', 'hidden');
+	})
+	$('.icon-cha').click(function () {
+		$('.hoverdiv').css("display", "none")
+		$('body').css('overflow', 'scroll')
+
+	})
+</script>
+
 </html>
