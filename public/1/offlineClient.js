@@ -4,7 +4,7 @@
 	
 	class OfflineClient
 	{
-		constructor()
+		constructor()   
 		{
 			// Create a BroadcastChannel, if supported.
 			this._broadcastChannel = (typeof BroadcastChannel === "undefined" ? null : new BroadcastChannel("offline"));
