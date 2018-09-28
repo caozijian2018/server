@@ -1,0 +1,19 @@
+{
+    "debugMode" : 1,
+    "noCache": false,
+    "showFPS" : true,
+    "frameRate" : 60,
+    "id" : "gameCanvas",
+    "renderMode" : 1,
+    "engineDir":"cocos2d",
+
+    "modules" : ["cocos2d"],
+
+    "jsList" : [
+        "src/resource.js",
+        "src/StartLayer.js",
+        "src/GameLayer.js",
+        "src/GameModel.js",
+        "src/ResultLayer.js"
+    ]
+}
