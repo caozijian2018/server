@@ -3,7 +3,7 @@ var app = express();
 var gedtClientIp = require("./get_ip").gedtClientIp;
 var des = require("./encode").des
 app.get('/backend/api/get_file_pass_token', (req, res) => {
-    var ip = gedtClientIp(req);
+    var ip = gedtClientIp(req).split("ffff:")[1];
     console.log(66666);
     console.log(ip)
     var Timestamp = new Date().getTime();
