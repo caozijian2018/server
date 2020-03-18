@@ -19,4 +19,4 @@ app.get('/backend/api/get_file_pass_token', (req, res) => {
     })
 })
 app.use(express.static('./public'));
-app.listen(63342);
+app.listen(63342, "0.0.0.0");
