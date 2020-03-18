@@ -2,7 +2,7 @@ var express = require("express");
 var app = express();
 var gedtClientIp = require("./get_ip").gedtClientIp;
 var des = require("./encode").des
-app.get('/get_file_pass_token', (req, res) => {
+app.get('/backend/api/get_file_pass_token', (req, res) => {
     var ip = gedtClientIp(req);
     console.log(66666);
     console.log(ip)
