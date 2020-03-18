@@ -47,7 +47,7 @@ exports.des = {
 
 
 
-    decrypt: function(encrypt_text, iv)
+    decrypt: function(encrypt_text, iv="testbird20202020")
 
     {
 

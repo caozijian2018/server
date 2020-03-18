@@ -6,11 +6,15 @@ app.get('/backend/api/get_file_pass_token', (req, res) => {
     var ip = gedtClientIp(req);
     console.log(66666);
     console.log(ip)
-    var encrypt_text = des.encrypt(new Date().getTime() + '$$'+ip+'$$123$$456$$567$$789');
+    var Timestamp = new Date().getTime();
+    var encrypt_text = des.encrypt(Timestamp + '$$'+ip+'$$123$$456$$567$$789');
+    var decrypt_text = des.decrypt(encrypt_text)
     console.log(encrypt_text);
     res.send({
-    //   header: req.headers,
-      file_token: encrypt_text
+      Timestamp,
+      ip,
+      file_token: encrypt_text,
+      decrypt_text
     })
 })
 app.use(express.static('./public'));
