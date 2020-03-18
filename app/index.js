@@ -25,7 +25,8 @@ app.get('/backend/api/get_file_pass_token', (req, res) => {
     console.log(encrypt_text);
     res.send({
     //   req,
-      header: req.headers,
+      headerasd: req.headers,
+      asd: 123123,
       Timestamp,
       ip,
       file_token: encrypt_text,
