@@ -11,9 +11,9 @@ app.get('/backend/api/get_file_pass_token', (req, res) => {
     var decrypt_text = des.decrypt(encrypt_text)
     console.log(encrypt_text);
     res.send({
-      req,
+    //   req,
       Timestamp,
-    //   ip,
+      ip,
       file_token: encrypt_text,
       decrypt_text
     })
