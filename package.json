@@ -5,15 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev" : "export NODE_ENV=development && node  app/index.js",
-    "prod" : "export NODE_ENV=production && node  app/index.js",
-    "build":"pm2 start  --name fangdichan npm -- run dev",
-    "restart":"pm2 restart  fangdichan"
-
+    "dev": "export NODE_ENV=development && node  app/index.js",
+    "prod": "export NODE_ENV=production && node  app/index.js",
+    "build": "pm2 start  --name fangdichan npm -- run dev",
+    "restart": "pm2 restart  fangdichan"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3"
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.3",
+    "jsdom": "^13.1.0"
   }
 }
