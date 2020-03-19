@@ -80,10 +80,11 @@ exports.des = {
 
 
 exports.handler = async(event, context, callback) => {
-    // 如果是游戏战 只校验index.html 其余的都返回 
-    // 如果是视频站 正常流程
-
     const request = event.Records[0].cf.request;
+    if(!(request.indexOf(".mp4") > -1 || request.indexOf("index.html") > -1 ||  request.indexOf("index.htm") > -1)){
+        callback(null, request);
+        return;
+    }
 
     const qs = request.querystring;
 
