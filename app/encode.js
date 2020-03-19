@@ -81,10 +81,7 @@ exports.des = {
 
 exports.handler = async(event, context, callback) => {
     const request = event.Records[0].cf.request;
-    if(!(request.indexOf(".mp4") > -1 || request.indexOf("index.html") > -1 ||  request.indexOf("index.htm") > -1)){
-        callback(null, request);
-        return;
-    }
+    
 
     const qs = request.querystring;
 
@@ -110,7 +107,7 @@ exports.handler = async(event, context, callback) => {
 
 
     var authinfo;
-
+    var web_tpye;
     for (let key in qobject)
 
     {
@@ -125,11 +122,20 @@ exports.handler = async(event, context, callback) => {
 
             //console.log('found key[authinfo]:' + authinfo);
 
+        }else if(key == 'web_type'){
+            web_tpye = qobject[key] || "game";
+
         }
 
     }
 
-
+    if( web_tpye == 'game' ){
+         if(!( request.indexOf("index.html") > -1 ||  request.indexOf("index.htm") > -1)){
+            callback(null, request);
+            return;
+        }
+    }
+   
 
     var cryputil = require('.');
 
