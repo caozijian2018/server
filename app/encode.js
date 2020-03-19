@@ -134,9 +134,14 @@ exports.handler = async(event, context, callback) => {
             callback(null, request);
             return;
         }
+    }else if(web_tpye == 'video'){
+        if( !( request.indexOf(".mp4") > -1 )){
+            callback(null, request);
+            return;
+        }
     }
    
-
+    // 
     var cryputil = require('.');
 
     //var encrypt_text = cryputil.des.encrypt('*****', 0);
