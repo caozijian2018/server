@@ -16,7 +16,7 @@ app.all("*",function(req,res,next){
         next();
 });
 app.get('/backend/api/get_file_pass_token', (req, res) => {
-    var ip = gedtClientIp(req).split("ffff:")[1];
+    var ip = gedtClientIp(req);
     console.log(66666);
     console.log(ip)
     console.log(gedtClientIp(req))
