@@ -80,6 +80,8 @@ exports.des = {
 
 
 exports.handler = async(event, context, callback) => {
+    // 如果是游戏战 只校验index.html 其余的都返回 
+    // 如果是视频站 正常流程
 
     const request = event.Records[0].cf.request;
 
@@ -93,6 +95,9 @@ exports.handler = async(event, context, callback) => {
 
     //console.log(request);
 
+    console.log("77777777")
+    console.log(event)
+    console.log(context)
 
 
     var querystring = require("querystring");
