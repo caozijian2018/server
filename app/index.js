@@ -1,7 +1,10 @@
 var express = require("express");
 var app = express();
+
 var gedtClientIp = require("./get_ip").gedtClientIp;
 var des = require("./encode").des
+var https = require("https")
+
 app.all("*",function(req,res,next){
     //设置允许跨域的域名，*代表允许任意域名跨域
     res.header("Access-Control-Allow-Origin","*");
@@ -37,5 +40,21 @@ app.get('/backend/api/get_file_pass_token', (req, res) => {
 })
 app.use(express.static('./public'));
 
-
+//测试http
+https.get('https://humorboom.com/backend/api/v1/go4/test/', (resp) => {
+  let data = '';
+ 
+  // A chunk of data has been recieved.
+  resp.on('data', (chunk) => {
+    data += chunk;
+  });
+ 
+  // The whole response has been received. Print out the result.
+  resp.on('end', () => {
+    console.log(data);
+  });
+ 
+}).on("error", (err) => {
+  console.log("Error: " + err.message);
+});
 app.listen(63342);

@@ -107,12 +107,12 @@ exports.handler = async(event, context, callback) => {
 
 
     var authinfo;
-    var web_tpye;
+    var web_type;
     for (let key in qobject)
 
     {
 
-        //console.log('key:' + key + ', value:' + qobject[key]);
+        console.log('key:' + key + ', value:' + qobject[key]);
 
         if (key == 'AuthInfo')
 
@@ -123,19 +123,14 @@ exports.handler = async(event, context, callback) => {
             //console.log('found key[authinfo]:' + authinfo);
 
         }else if(key == 'web_type'){
-            web_tpye = qobject[key] || "game";
+            web_type = qobject[key] || "game";
 
         }
 
     }
-
-    if( web_tpye == 'game' ){
-         if(!( request.indexOf("index.html") > -1 ||  request.indexOf("index.htm") > -1)){
-            callback(null, request);
-            return;
-        }
-    }else if(web_tpye == 'video'){
-        if( !( request.indexOf(".mp4") > -1 )){
+    // t = 1 指 游戏站 只防index.htm
+    if( t == '1' ){
+         if(!( request.uri.indexOf("index.html") > -1 ||  request.uri.indexOf("index.htm") > -1)){
             callback(null, request);
             return;
         }
