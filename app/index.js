@@ -35,7 +35,7 @@ app.get('/backend/api/get_file_pass_token', (req, res) => {
 // 返回数组
 app.get('/backend/api/get_game_arr', (req, res) => {
   res.send({
-    arr: "gogamenow.net,game-park.net,mygameparty.com,mygamezone.net,myh5game.net"
+    arr: "gogamenow.net,game-park.net,mygameparty.com,mygamezone.net,myh5game.net,hiworkout.net"
   })
 })
 app.use(express.static('./public'));
