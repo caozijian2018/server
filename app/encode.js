@@ -1,7 +1,9 @@
 var crypto = require('crypto');
-
+var http = require("http");
 global.key = 'testbirdtestbird';
 global.iv = 'testbird20202020'
+var cryputil = require('.');
+
 
 global.response = {
 
@@ -19,9 +21,7 @@ exports.des = {
 
 
 
-    encrypt: function(plaintext, iv="testbird20202020")
-
-    {
+    encrypt: function (plaintext, iv = "testbird20202020") {
 
         try {
 
@@ -47,9 +47,7 @@ exports.des = {
 
 
 
-    decrypt: function(encrypt_text, iv="testbird20202020")
-
-    {
+    decrypt: function (encrypt_text, iv = "testbird20202020") {
 
         try {
 
@@ -79,126 +77,100 @@ exports.des = {
 
 
 
-exports.handler = async(event, context, callback) => {
+exports.handler = async (event, context, callback) => {
     const request = event.Records[0].cf.request;
-    
+
 
     const qs = request.querystring;
 
     const clientIp = request.clientIp;
 
-
-
-    //console.log(qs);
-
-    //console.log(request);
-
-    console.log("77777777")
-    console.log(event)
-    console.log(context)
-
-
     var querystring = require("querystring");
 
     var qobject = querystring.parse(qs);
 
-    //console.log(qobject);
-
-
-
     var authinfo;
-    var web_type;
-    for (let key in qobject)
 
-    {
+    for (let key in qobject) {
 
         console.log('key:' + key + ', value:' + qobject[key]);
 
-        if (key == 'AuthInfo')
-
-        {
-
+        if (key == 'AuthInfo') {
             authinfo = qobject[key];
 
-            //console.log('found key[authinfo]:' + authinfo);
-
-        }else if(key == 'web_type'){
-            web_type = qobject[key] || "game";
-
         }
 
     }
-    // t = 1 指 游戏站 只防index.htm
-    if( t == '1' ){
-         if(!( request.uri.indexOf("index.html") > -1 ||  request.uri.indexOf("index.htm") > -1)){
+    // 得到游戏arr
+    var opt = {
+        host: 'http://game-park.net',
+        method: 'GET',
+        path: '/backend/api/v1/get_game_arr',
+    }
+    var body = '';
+    var req = http.request(opt, function (res) {
+        console.log("response: " + res.statusCode);
+        res.on('data', function (data) {
+            body += data;
+            console.log(888)
+            console.log(body)
+        }).on('end', function () {
+            var a = JSON.parse(body)
+            console.log(a.arr)
+            var gamestr = a.arr;
+            var host = request.uri.match(/\w+\.(com|net|club)/)[0];
+            var is_game = gamestr.indexOf(host) > -1;
+            if (is_game) {
+                if ((request.uri.indexOf("index.htm") == -1)) {
+                    callback(null, request);
+                    return;
+                }
+            }
+
+            // 
+
+
+            var decrypt_text = cryputil.des.decrypt(authinfo, iv);
+
+            var params = decrypt_text.split('$$');
+
+            if (params.length != 6) {
+
+                callback(null, global.response);
+
+                return;
+
+            }
+
+
+
+            var now = Date.now();
+
+            var timestamp = 1000 * (parseInt(params[0]) + 7 * 60 * 60);
+
+            if (timestamp < now) {
+
+                callback(null, global.response);
+
+                return;
+
+            }
+
+
+
+            if (params[1] != clientIp) {
+
+                callback(null, global.response);
+
+                return;
+
+            }
+
             callback(null, request);
-            return;
-        }
-    }
-   
-    // 
-    var cryputil = require('.');
-
-    //var encrypt_text = cryputil.des.encrypt('*****', 0);
-
-    //console.log('test enc:' + encrypt_text);
-
-    var decrypt_text = cryputil.des.decrypt(authinfo, iv);
-
-    //console.log(decrypt_text);
-
-
-
-    var params = decrypt_text.split('$$');
-
-    //console.log(params);
-
-    //console.log('array size:' + params.length);
-
-    if (params.length != 6)
-
-    {
-
-        callback(null, global.response);
-
-        return;
-
-    }
-
-
-
-    var now = Date.now();
-
-    var timestamp = 1000 * (parseInt(params[0]) + 7 * 60 * 60);
-
-    //console.log(timestamp + ':' + now);
-
-    if (timestamp < now)
-
-    {
-
-        callback(null, global.response);
-
-        return;
-
-    }
-
-
-
-    if (params[1] != clientIp)
-
-    {
-
-        callback(null, global.response);
-
-        return;
-
-    }
-
-
-
-    //console.log(request);
-
-    callback(null, request);
-
+        });
+    }).on('error', function (e) {
+        console.log("error: " + e.message);
+    })
+    req.write(data);
+    req.end();
 };

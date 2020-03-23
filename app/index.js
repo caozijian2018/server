@@ -27,15 +27,16 @@ app.get('/backend/api/get_file_pass_token', (req, res) => {
     var encrypt_text = des.encrypt(Timestamp + '$$'+ip+'$$123$$456$$567$$789');
     var decrypt_text = des.decrypt(encrypt_text)
     console.log(encrypt_text);
-    //   req,
-    //   headerasd: req.headers,
     res.send({
-    //   headerasd: req.headers,
-    //   Timestamp,
-    //   ip,
       file_token: encrypt_text,
       decrypt_text
     })
+})
+// 返回数组
+app.get('/backend/api/get_game_arr', (req, res) => {
+  res.send({
+    arr: "gogamenow.net,game-park.net,mygameparty.com,mygamezone.net,myh5game.net"
+  })
 })
 app.use(express.static('./public'));
 
