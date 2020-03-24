@@ -80,6 +80,7 @@ exports.des = {
 exports.handler = async (event, context, callback) => {
     console.log("????????")
     const request = event.Records[0].cf.request;
+    console.log(String(callback))
     console.log(request.uri)
     console.log(JSON.stringify(request))
 
@@ -111,6 +112,7 @@ exports.handler = async (event, context, callback) => {
         path: '/backend/api/v1/get_game_arr',
     }
     var body = '';
+    var is_game = false;
     var req = http.request(opt, function (res) {
         console.log("response: " + res.statusCode);
         res.on('data', function (data) {
@@ -126,8 +128,16 @@ exports.handler = async (event, context, callback) => {
             console.log(JSON.stringify(request))
             var host = request.headers.host[0].value;
             console.log(host)
-            var is_game = gamestr.indexOf(host) > -1;
+            console.log("gameeeeeeeeee")
+            console.log(gamestr)
+            is_game = gamestr.indexOf(host) > -1;
+            console.log(is_game)
+            console.log("返回的函数")
+            console.log(String(callback))
+            console.log(JSON.stringify(request))
             if (is_game) {
+                console.log("直接返回！！！")
+                console.log(request.uri.indexOf("index.htm") == -1);
                 if ((request.uri.indexOf("index.htm") == -1)) {
                     callback(null, request);
                     return;
