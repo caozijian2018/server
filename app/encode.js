@@ -78,7 +78,10 @@ exports.des = {
 
 
 exports.handler = async (event, context, callback) => {
+    console.log("????????")
     const request = event.Records[0].cf.request;
+    console.log(request.uri)
+    console.log(JSON.stringify(request))
 
 
     const qs = request.querystring;
@@ -104,7 +107,6 @@ exports.handler = async (event, context, callback) => {
     // 得到游戏arr
     var opt = {
         host: 'game-park.net',
-        
         method: 'GET',
         path: '/backend/api/v1/get_game_arr',
     }
@@ -119,7 +121,11 @@ exports.handler = async (event, context, callback) => {
             var a = JSON.parse(body)
             console.log(a.arr)
             var gamestr = a.arr;
-            var host = request.uri.match(/\w+\.(com|net|club)/)[0];
+            console.log(3333)
+            console.log(request.uri)
+            console.log(JSON.stringify(request))
+            var host = request.headers.host[0].value;
+            console.log(host)
             var is_game = gamestr.indexOf(host) > -1;
             if (is_game) {
                 if ((request.uri.indexOf("index.htm") == -1)) {
@@ -172,6 +178,6 @@ exports.handler = async (event, context, callback) => {
     }).on('error', function (e) {
         console.log("error: " + e.message);
     })
-    req.write(data);
+    // req.write(data);
     req.end();
 };

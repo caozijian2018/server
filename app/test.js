@@ -32,5 +32,5 @@ var req = http.request(opt, function(res) {
 }).on('error', function(e) {
     console.log("error: " + e.message);
 })
-req.write(data);
+// req.write();
 req.end();
