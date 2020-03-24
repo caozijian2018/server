@@ -103,7 +103,8 @@ exports.handler = async (event, context, callback) => {
     }
     // 得到游戏arr
     var opt = {
-        host: 'http://game-park.net',
+        host: 'game-park.net',
+        
         method: 'GET',
         path: '/backend/api/v1/get_game_arr',
     }

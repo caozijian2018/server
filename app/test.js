@@ -8,10 +8,10 @@ var data = {
 data = JSON.stringify(data);
 
 var opt = {
-    host:'localhost',
-    port:'63342',
+    host:'game-park.net',
+    port:'80',
     method:'GET',
-    path:'/get_game_arr',
+    path:'/backend/api/v1/get_game_arr',
     // headers:{
     //     "Content-Type": 'application/json',
     //     "Content-Length": data.length
