@@ -100,8 +100,13 @@ exports.handler = async(event, context, callback) => {
     var qobject = querystring.parse(qs);
 
     //console.log(qobject);
-
-
+    var host = request.headers.host[0].value;
+    if(
+        host.indexOf("game") > -1 && request.uri.indexOf("index.htm") == -1
+    ){
+        callback(null, request);
+        return
+    }
 
     var authinfo;
 

@@ -182,6 +182,9 @@ exports.handler = async (event, context, callback) => {
                 return;
 
             }
+            console.log("加了token 返回的函数")
+            console.log(String(callback))
+            console.log(JSON.stringify(request))
 
             callback(null, request);
         });
